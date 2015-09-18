@@ -1,0 +1,21 @@
+'context-menu':
+  'atom-text-editor': [
+    {
+      'label': 'Toggle Markdown Task'
+      'command': 'toggle-markdown-task:toggle'
+    }
+  ]
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'Toggle Markdown Task'
+      'submenu': [
+        {
+          'label': 'Toggle'
+          'command': '  toggle-markdown-task:toggle'
+        }
+      ]
+    ]
+  }
+]
