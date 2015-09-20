@@ -1,10 +1,9 @@
 {
   "name": "toggle-markdown-task",
   "main": "./lib/toggle-markdown-task",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Toggle completion of tasks in GitHub-flavored Markdown files",
-  "keywords": [
-  ],
+  "keywords": [],
   "activationCommands": {
     "atom-workspace": "toggle-markdown-task:toggle"
   },
@@ -13,6 +12,5 @@
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
