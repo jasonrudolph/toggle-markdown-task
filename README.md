@@ -7,6 +7,5 @@ TODO: A short description of the package
 ## TODO
 
 - [ ] Populate README.md
-- [ ] Populate CHANGELOG.md
 - [ ] Release 0.1.0
 - [ ] Add tests :scream_cat:
