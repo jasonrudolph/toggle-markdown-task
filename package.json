@@ -2,7 +2,7 @@
   "name": "toggle-markdown-task",
   "main": "./lib/toggle-markdown-task",
   "version": "0.0.0",
-  "description": "TODO A short description of the package",
+  "description": "Toggle completion of tasks in GitHub-flavored Markdown files",
   "keywords": [
   ],
   "activationCommands": {
