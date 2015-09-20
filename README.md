@@ -25,7 +25,6 @@ To get the most out of this package, you'll want to use a keyboard shortcut for 
 
 ## TODO
 
-- [ ] Release 0.1.0
 - [ ] Add tests :scream_cat:
 - [ ] Support multiline range selection: Toggle every task in selected range
 - [ ] Support multiple cursors: Toggle tasks at every cursor
