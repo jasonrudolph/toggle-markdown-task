@@ -1,3 +1,7 @@
+## 0.2.0 - TODO: Not yet released
+
+* Removed toggle-markdown-task command from context menu.
+
 ## 0.1.0 - First Release
 
 * Initial release. Includes command to toggle completion of a [task in GitHub-flavored Markdown][gfm-task-lists].
