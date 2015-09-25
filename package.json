@@ -3,7 +3,13 @@
   "main": "./lib/toggle-markdown-task",
   "version": "0.2.0",
   "description": "Toggle completion of tasks in GitHub-flavored Markdown files",
-  "keywords": [],
+  "keywords": [
+    "gfm",
+    "list",
+    "markdown",
+    "task",
+    "todo"
+  ],
   "activationCommands": {
     "atom-text-editor": [
       "toggle-markdown-task:toggle"
