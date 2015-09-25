@@ -5,7 +5,9 @@
   "description": "Toggle completion of tasks in GitHub-flavored Markdown files",
   "keywords": [],
   "activationCommands": {
-    "atom-workspace": "toggle-markdown-task:toggle"
+    "atom-text-editor": [
+      "toggle-markdown-task:toggle"
+    ]
   },
   "repository": "https://github.com/jasonrudolph/toggle-markdown-task",
   "license": "MIT",

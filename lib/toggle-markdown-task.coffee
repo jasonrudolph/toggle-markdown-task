@@ -5,7 +5,7 @@ module.exports = ToggleMarkdownTask =
 
   activate: (state) ->
     @subscriptions = new CompositeDisposable
-    @subscriptions.add atom.commands.add 'atom-workspace',
+    @subscriptions.add atom.commands.add 'atom-text-editor',
       'toggle-markdown-task:toggle': => @toggle()
 
   deactivate: ->
