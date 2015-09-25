@@ -1,4 +1,4 @@
-## 0.2.0 - TODO: Not yet released
+## 0.2.0 - La Catedral
 
 * Removed toggle-markdown-task command from context menu.
 
