@@ -1,3 +1,7 @@
+## 0.3.0 - Show Me a Hero
+
+* Teaches command to toggle all tasks in a multiline selection.
+
 ## 0.2.0 - La Catedral
 
 * Removed toggle-markdown-task command from context menu.
