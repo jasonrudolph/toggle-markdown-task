@@ -26,8 +26,8 @@ module.exports = ToggleMarkdownTask =
           if toggledTask
             selection.insertText(toggledTask)
 
-toggleTask = (task) ->
-  if task.search(/\- \[ \]/) != -1
-    task.replace /\- \[ \]/, "- [x]"
-  else if task.search(/\- \[x\]/) != -1
-    task.replace /\- \[x\]/, "- [ ]"
+toggleTask = (taskText) ->
+  if taskText.search(/\- \[ \]/) != -1
+    taskText.replace /\- \[ \]/, "- [x]"
+  else if taskText.search(/\- \[x\]/) != -1
+    taskText.replace /\- \[x\]/, "- [ ]"
