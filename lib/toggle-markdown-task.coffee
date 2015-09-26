@@ -22,14 +22,13 @@ toggleSelection = (selection) ->
     selection.cursor.setBufferPosition([row, 0])
     selection.selectToEndOfLine()
 
-    if line = selection.getText()
-      toggledTask = toggleTask(line)
-
-      if toggledTask
-        selection.insertText(toggledTask)
+    toggledTask = toggleTask(selection.getText())
+    selection.insertText(toggledTask)
 
 toggleTask = (taskText) ->
   if taskText.search(/\- \[ \]/) != -1
     taskText.replace /\- \[ \]/, "- [x]"
   else if taskText.search(/\- \[x\]/) != -1
     taskText.replace /\- \[x\]/, "- [ ]"
+  else
+    taskText
