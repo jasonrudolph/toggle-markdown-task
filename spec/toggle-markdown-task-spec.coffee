@@ -46,3 +46,21 @@ describe "toggling markdown task", ->
           - [ ] B
           - [ ] C
         """
+
+  describe "when multiple lines are selected", ->
+    it "toggles completion of the tasks on the selected lines", ->
+      editor.setText """
+        - [ ] A
+        - [ ] B
+        - [ ] C
+        - [ ] D
+      """
+      editor.setSelectedBufferRange([[1,1], [2,1]])
+
+      toggleMarkdownTask ->
+        expect(editor.getText()).toBe """
+          - [ ] A
+          - [x] B
+          - [x] C
+          - [ ] D
+        """
