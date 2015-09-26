@@ -13,18 +13,20 @@ module.exports = ToggleMarkdownTask =
 
   toggle: ->
     if editor = atom.workspace.getActiveTextEditor()
-      selection = editor.getLastSelection();
-      rows  = selection.getBufferRowRange()
+      toggleSelection(editor.getLastSelection())
 
-      for row in [rows[0]..rows[1]]
-        selection.cursor.setBufferPosition([row, 0])
-        selection.selectToEndOfLine()
+toggleSelection = (selection) ->
+  rows = selection.getBufferRowRange()
 
-        if line = selection.getText()
-          toggledTask = toggleTask(line)
+  for row in [rows[0]..rows[1]]
+    selection.cursor.setBufferPosition([row, 0])
+    selection.selectToEndOfLine()
 
-          if toggledTask
-            selection.insertText(toggledTask)
+    if line = selection.getText()
+      toggledTask = toggleTask(line)
+
+      if toggledTask
+        selection.insertText(toggledTask)
 
 toggleTask = (taskText) ->
   if taskText.search(/\- \[ \]/) != -1
