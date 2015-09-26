@@ -15,8 +15,8 @@ describe "toggling markdown task", ->
       editorView = atom.views.getView(editor)
       activationPromise = atom.packages.activatePackage("toggle-markdown-task")
 
-  describe "when the cursor is on the line of an incomplete task", ->
-    it "marks the task as completed", ->
+  describe "when the cursor is on a single line", ->
+    it "toggles a task from incomplete to complete", ->
       editor.setText """
         - [ ] A
         - [ ] B
@@ -31,8 +31,7 @@ describe "toggling markdown task", ->
           - [ ] C
         """
 
-  describe "when the cursor is on the line of a completed task", ->
-    it "marks the task as incomplete", ->
+    it "toggles a task from complete to incomplete", ->
       editor.setText """
         - [ ] A
         - [x] B
