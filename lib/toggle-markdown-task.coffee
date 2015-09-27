@@ -13,8 +13,9 @@ module.exports = ToggleMarkdownTask =
 
   toggle: ->
     if editor = atom.workspace.getActiveTextEditor()
-      editor.getSelections().forEach (selection) =>
-        toggleSelection(selection)
+      editor.transact =>
+        editor.getSelections().forEach (selection) =>
+          toggleSelection(selection)
 
 toggleSelection = (selection) ->
   originalRange = selection.getBufferRange()
