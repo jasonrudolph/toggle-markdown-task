@@ -46,6 +46,17 @@ describe "toggling markdown task", ->
           - [ ] C
         """
 
+    it "retains the original cursor position", ->
+      editor.setText """
+        - [ ] A
+        - [ ] B
+        - [ ] C
+      """
+      editor.setCursorBufferPosition([1, 2])
+
+      toggleMarkdownTask ->
+        expect(editor.getCursorBufferPosition()).toEqual [1, 2]
+
   describe "when multiple lines are selected", ->
     it "toggles completion of the tasks on the selected lines", ->
       editor.setText """
@@ -63,3 +74,15 @@ describe "toggling markdown task", ->
           - [x] C
           - [ ] D
         """
+
+    it "retains the original selection range", ->
+      editor.setText """
+        - [ ] A
+        - [ ] B
+        - [ ] C
+        - [ ] D
+      """
+      editor.setSelectedBufferRange([[1,1], [2,1]])
+
+      toggleMarkdownTask ->
+        expect(editor.getSelectedBufferRange()).toEqual [[1,1], [2,1]]

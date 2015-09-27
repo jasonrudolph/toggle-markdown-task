@@ -16,14 +16,17 @@ module.exports = ToggleMarkdownTask =
       toggleSelection(editor.getLastSelection())
 
 toggleSelection = (selection) ->
-  rows = selection.getBufferRowRange()
+  originalRange = selection.getBufferRange()
 
+  rows = selection.getBufferRowRange()
   for row in [rows[0]..rows[1]]
     selection.cursor.setBufferPosition([row, 0])
     selection.selectToEndOfLine()
 
     toggledTask = toggleTask(selection.getText())
     selection.insertText(toggledTask)
+
+  selection.setBufferRange(originalRange)
 
 toggleTask = (taskText) ->
   if taskText.search(/\- \[ \]/) != -1

@@ -27,7 +27,6 @@ To get the most out of this package, you'll want to use a keyboard shortcut for 
 
 - [ ] Set up CI
 - [ ] Support multiple cursors: Toggle tasks at every cursor
-- [ ] Retain existing cursors/selections after toggling tasks
 
 [atom-keymaps]: https://atom.io/docs/v1.0.15/using-atom-basic-customization#customizing-key-bindings
 [gfm-task-lists]: https://help.github.com/articles/writing-on-github/#task-lists
