@@ -1,3 +1,7 @@
+## 0.4.0 - Despegue
+
+* Taught command to *not* change the existing cursor position / selection range.
+
 ## 0.3.0 - Show Me a Hero
 
 * Taught command to toggle all tasks in a multiline selection.
