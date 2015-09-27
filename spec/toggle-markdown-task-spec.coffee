@@ -86,3 +86,26 @@ describe "toggling markdown task", ->
 
       toggleMarkdownTask ->
         expect(editor.getSelectedBufferRange()).toEqual [[1,1], [2,1]]
+
+  describe "when multiple cursors are present", ->
+    it "toggles completion of the tasks in every cursor's selection range", ->
+      editor.setText """
+        - [ ] A
+        - [ ] B
+        - [ ] C
+        - [ ] D
+      """
+
+      # Add cursor with empty selection range on the line of task "A"
+      editor.addCursorAtBufferPosition([0, 0])
+
+      # Add cursor with selection range that includes tasks "C" and "D"
+      editor.addSelectionForBufferRange([[2, 0], [3, 7]])
+
+      toggleMarkdownTask ->
+        expect(editor.getText()).toBe """
+          - [x] A
+          - [ ] B
+          - [x] C
+          - [x] D
+        """
