@@ -1,3 +1,8 @@
+## 0.5.0 - Live (At the Time)
+
+* Taught command to toggle tasks at every cursor, as opposed to only toggling tasks for the last cursor.
+* Bundled command's operations in an atomic undo/redo step.
+
 ## 0.4.0 - Despegue
 
 * Taught command to *not* change the existing cursor position / selection range.
