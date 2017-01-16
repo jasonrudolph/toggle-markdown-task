@@ -1,3 +1,7 @@
+## 0.6.0 - St. Mark's
+
+* Taught command to recognize task list items that begin with an asterisk.
+
 ## 0.5.0 - Live (At the Time)
 
 * Taught command to toggle tasks at every cursor, as opposed to only toggling tasks for the last cursor.
