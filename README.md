@@ -28,4 +28,4 @@ To get the most out of this package, you'll want to use a keyboard shortcut for 
 - [ ] Set up CI
 
 [atom-keymaps]: https://atom.io/docs/v1.0.15/using-atom-basic-customization#customizing-key-bindings
-[gfm-task-lists]: https://help.github.com/articles/writing-on-github/#task-lists
+[gfm-task-lists]: https://help.github.com/articles/about-task-lists/
