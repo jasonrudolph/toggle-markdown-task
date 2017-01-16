@@ -31,9 +31,17 @@ toggleSelection = (selection) ->
   selection.setBufferRange(originalRange)
 
 toggleTask = (taskText) ->
-  if taskText.search(/\- \[ \]/) != -1
-    taskText.replace /\- \[ \]/, "- [x]"
-  else if taskText.search(/\- \[x\]/) != -1
-    taskText.replace /\- \[x\]/, "- [ ]"
-  else
-    taskText
+  REGEX = ///
+    ([\-\*]\ ) # task prefix: '- ' or '* '
+    (          # start capture group for task status
+      \[       # task status begins with an open bracket: '['
+      [\ x]    # task status brackets contain a single empty space or an 'x'
+      \]       # task status ends with a closing bracket: ']'
+    )          # end capture group for task status
+  ///
+
+  taskText.replace REGEX, (_, taskPrefix, taskStatus) ->
+    if taskStatus == "[ ]"
+      "#{taskPrefix}[x]"
+    else
+      "#{taskPrefix}[ ]"

@@ -109,3 +109,15 @@ describe "toggling markdown task", ->
           - [x] C
           - [x] D
         """
+
+  describe "when '*' is used as the leading character for a task list item", ->
+    it "toggles completion of the task", ->
+      editor.setText """
+        * [ ] A
+      """
+      editor.setCursorBufferPosition([0, 0])
+
+      toggleMarkdownTask ->
+        expect(editor.getText()).toBe """
+          * [x] A
+        """
