@@ -1,3 +1,5 @@
+/* global beforeEach, describe, expect, it, runs, waitsForPromise */
+
 describe('toggling markdown task', () => {
   let activationPromise, editor, editorView
 
