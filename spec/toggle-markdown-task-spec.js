@@ -28,7 +28,7 @@ describe('toggling markdown task', () => {
       `)
       editor.setCursorBufferPosition([1, 0])
 
-      expectedTextAfterToggling = `\
+      const expectedTextAfterToggling = `\
         - [ ] A
         - [x] B
         - [ ] C
@@ -44,7 +44,7 @@ describe('toggling markdown task', () => {
       `)
       editor.setCursorBufferPosition([1, 0])
 
-      expectedTextAfterToggling = `\
+      const expectedTextAfterToggling = `\
         - [ ] A
         - [ ] B
         - [ ] C
@@ -78,7 +78,7 @@ describe('toggling markdown task', () => {
       `)
       editor.setSelectedBufferRange([[1, 1], [2, 1]])
 
-      expectedTextAfterToggling = `\
+      const expectedTextAfterToggling = `\
         - [ ] A
         - [x] B
         - [x] C
@@ -119,7 +119,7 @@ describe('toggling markdown task', () => {
       // Add cursor with selection range that includes tasks "C" and "D"
       editor.addSelectionForBufferRange([[2, 0], [3, 7]])
 
-      expectedTextAfterToggling = `\
+      const expectedTextAfterToggling = `\
         - [x] A
         - [ ] B
         - [x] C
