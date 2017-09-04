@@ -30,6 +30,7 @@
     ]
   },
   "scripts": {
-    "lint": "standard --verbose"
+    "lint": "standard --verbose",
+    "test": "npm run lint && apm test"
   }
 }
