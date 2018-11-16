@@ -140,4 +140,14 @@ describe('toggling markdown task', () => {
       )
     })
   )
+
+  describe('when multiple whitespaces precede checkbox', () =>
+    it('toggles completion of the task', () => {
+      editor.setText('-   [ ] A')
+      editor.setCursorBufferPosition([0, 0])
+
+      toggleMarkdownTask(() => expect(editor.getText()).toBe('-   [x] A')
+      )
+    })
+  )
 })
