@@ -1,6 +1,6 @@
 ## 0.7.0 - Cake Week
 
-* Taught command to recognize task list items that have multiple spaces between the bullet character and the opening bracket (#6). 🙌 @hbschr
+* Taught command to recognize task list items that have multiple spaces between the bullet character and the opening bracket ([#6](https://github.com/jasonrudolph/toggle-markdown-task/pull/6)). 🙌 [@hbschr](https://github.com/hbschr)
 
 ## 0.6.0 - St. Mark's
 
