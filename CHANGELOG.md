@@ -1,3 +1,7 @@
+## 0.7.0 - Cake Week
+
+* Taught command to recognize task list items that have multiple spaces between the bullet character and the opening bracket (#6). 🙌 @hbschr
+
 ## 0.6.0 - St. Mark's
 
 * Taught command to recognize task list items that begin with an asterisk.
